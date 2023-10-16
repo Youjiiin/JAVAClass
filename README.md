@@ -1,8 +1,10 @@
 # JAVAClass 
 📕책 : JAVA의 정석
 
-
-### 📂 2장 : 변수(Variable)
+<details>
+  <summary>
+  📂 2장 : 변수(Variable)
+  </summary>
 
 📌 변수 : 하나의 값을 저장할 수 있는 메모리 공
 - 기본형 : boolean, char, byte, short, int, long, float, double
@@ -68,9 +70,15 @@ ex)
     String input = scanner.nextLine(); // 입력받은 문자열을 input에 저장
     int num2 = Integer.parseInt(input); // 문자열 -> 숫자 변환
 
+
+</details>
+
 ----------------------------------------------------------------------
 
-### 📂 3장 : 연산자
+<details>
+  <summary>
+  📂 3장 : 연산자
+  </summary>
 
 📌 연산자 : 어떠한 기능을 수행하는 기호
 
@@ -109,9 +117,16 @@ ex)
 
 👋Math.round() : 소수점 첫째자리에서 반올림한 값을 반환
 
+</details>
+
 ----------------------------------------------------------------------
 
-### 📂 4장 : [조건문과 반복문](https://github.com/Youjiiin/JAVAClass/blob/master/src/Week2)
+<details>
+  <summary>
+  📂 4장 : 조건문과 반복문
+  </summary>
+
+✨ [조건문과 반복문 실습](https://github.com/Youjiiin/JAVAClass/blob/master/src/Week2)
 
 📌 if문
     
@@ -189,4 +204,5 @@ ex)
         System.out.println(i);
     }
     ```
-👋 반복문에 이름을 붙여서 해당 반복문을 벗어날 수 있
+👋 반복문에 이름을 붙여서 해당 반복문을 벗어날 수 있음
+</details>
