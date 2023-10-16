@@ -111,7 +111,7 @@ ex)
 
 ----------------------------------------------------------------------
 
-### 📂 4장 : [조건문과 반복문](https://github.com/Youjiiin/JAVAClass/blob/master/src/Week2/Week2_1.java)
+### 📂 4장 : [조건문과 반복문](https://github.com/Youjiiin/JAVAClass/blob/master/src/Week2)
 
 📌 if문
     
