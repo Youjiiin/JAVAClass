@@ -57,13 +57,4 @@ ex)
 
 📌 printf()의 지시자
 
-%f : float형식 <br>
-%d : 정수 <br>
-
-📌 Scanner 사용
-
-    import java.util.*; //import
-    Scanner scanner = new Scanner(System.in); //Scanner객체 생성
-    int num = scanner.nextInt(); //정수를 입력받음
-    String input = scanner.nextLine(); //문자열을 입력받음
-    int num = Integer.parseInt(input); //문자열 -> 숫자로 변환
+%f : float형식 환<br>
