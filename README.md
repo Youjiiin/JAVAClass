@@ -58,3 +58,12 @@ ex)
 📌 printf()의 지시자
 
 %f : float형식 환<br>
+%d : 정수형식 <br>
+
+📌 Scanner로 입력받기
+    
+    import java.util.*;
+    Scanner scaneer = new Scanner(System.in);
+    int num = scanner.nextInt; //입력받은 정수를 num에 저장
+    String input = scanner.nextLine(); // 입력받은 문자열을 input에 저장
+    int num2 = Integer.parseInt(input); // 문자열 -> 숫자 변환
