@@ -327,7 +327,7 @@ System.arraycopy(arr1, 0, arr2, 0, arr1.length);
 - 객체안에 인스턴스가 포함되어 있음
 - 객체는 '실체', 인스턴스는 '관계'에 초점
 
-✍️인스턴스의 생성과 사용
+✍️[인스턴스의 생성과 사용](https://github.com/Youjiiin/JAVAClass/tree/master/src/Week3)
 
 ✔ 인스턴스의 생성
 ```
