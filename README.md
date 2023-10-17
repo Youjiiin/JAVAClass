@@ -481,4 +481,102 @@ long add(long a, int b) { return a + b; }4
 - 같은 기능을 하는 메서드를 하나의 이름으로 정의해 사용할 수 있음
 </details>
 
+<details>
+  <summary>
+    👩‍💻 생성자
+  </summary>
+
+📌 생성자
+- 인스턴스가 생성될 때마다 호출되는 '인스턴스 초기화 메서드'
+- 인스턴스 변수의 초기화 / 인스턴스 생성시 수행할 작업에 사용
+- 몇가지 조건을 제외하고 메서드와 같음
+- 모든 클래스에 반드시 하나 이상의 생성자가 있어야 한다.
+
+```
+Card c = new Card();
+// 1. 연산자 new에 의해서 메모리(heap)에 Card클래스의 인스턴스가 생성됨
+// 2. 생성자 Card()가 호출되어 수행됨
+// 3. 연산자 new의 결과로, 생성된 Card 인스턴스의 주소가 변환되어 참조변수 c에 저장됨
+```
+
+- 생성자의 이름은 클래스의 이름과 같아야 함
+- 생성자는 return값이 없다. (but void는 사용하지 않음)
+```
+class Card() {
+  Card (){
+    //기본 생성자, 입력하지 않아서 빈내용의 생성자를 컴파일러가 추가.
+    //인스턴스 초기화 작업
+  }
+
+  int value;
+  Card ( int x ) {
+    // 매개변수가 있는 생성자
+    value = x;
+  }
+}
+
+Card c1 = new Card();
+c1.vaule = 1;
+//or
+Card c2 = new Card(2);
+```
+
+📌 생성자에서 다른 생성자 호출하기 - this()
+```
+class Car {
+  String color;
+  int door;
+
+  Car () {
+    this("white", 4);
+    // = Car("white", 4);
+  }
+
+  Car (String c, int d) {
+    color = c;
+    door = d;
+  }
+}
+```
+
+📌 참조변수 this <br>
+: 인스턴스 자신을 가리키는 참조변수. 인스턴스의 주소가 저장되어있음
+```
+class Car {
+  String color;
+  int door;
+
+  Car () {
+    this("white", 4);
+  }
+
+  Car (String color, int door) {
+    this.color = color; //this.지역변수 = 인스턴스 변수
+    this.door = door;
+  }
+
+  //생성자를 이용한 인스턴스의 복사
+  Car (Car c) {
+    color = c.color;
+    door = c.door;
+  }
+}
+```
+
+🧩 [초기화](https://github.com/Youjiiin/JAVAClass/tree/master/src/Week4)
+```
+class InitTest {
+  static int cv = 1; // 명시적 초기화
+  int iv = 1; // 명시적 초기화
+
+  static { cv = 2; // 클래스 초기화 블럭 }
+  { iv = 2; // 인스턴스 초기화 블럭 }
+
+  InitTest () { //생성자
+    iv = 3; 
+  }
+}
+```
+</details>
+
 </details>
