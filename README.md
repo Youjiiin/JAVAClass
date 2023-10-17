@@ -206,3 +206,86 @@ ex)
     ```
 👋 반복문에 이름을 붙여서 해당 반복문을 벗어날 수 있음
 </details>
+
+----------------------------------------------------------------------
+
+<details>
+  <summary>
+    📂 5장 : 배열
+  </summary>
+
+📌 배열 : 같은 타입의 여러 변수를 하나의 묶음으로 다루는 것
+```
+//배열 선언
+int[] score; 
+int score[];
+String[] name;
+String name[];
+
+//배열 생성
+int[] score;
+score = new int[];
+
+//배열 초기화
+int[] score = { 100, 90, 80, 70 };
+int[] score = new int[]{ 100, 90, 80, 70 };
+```
+
+
+📌 배열의 요소
+
+✔ 배열에 값을 저장하고 읽어오기
+```
+score[3] = 100; //배열 score의 4번째 요소에 100을 저장
+int value = score[3]; //배열 score의 4번째 요소에 저장된 값을 value에 할당
+```
+
+✔ '배열이름.length'는 배열의 크기를 알려준다.
+
+
+📌 다차원 배열 : []의 개수가 차원수를 의미
+
+```
+int[][] score = new int [5][3]; //5행 3열의 2차원 배열을 생성
+```
+
+
+📌 가변 배열 : 다차원 배열에서 마지막 차수의 크기를 지정하지 않고 각각 다르게 지정
+
+```
+int[][] score = new int[3][];
+score[0] = new int[3];
+score[1] = new int[2];
+score[2] = new int[1];
+int[][] score =
+{
+    { 100, 100, 100 },
+    { 90, 90 },
+    { 80 },
+}
+```
+
+
+📌 배열의 복사
+
+✔ for문을 이용한 배열의 복사
+
+```
+int[] num = { 1, 2, 3, 4, 5 };
+int[] newNum = new int[10];
+
+for( int i = 0; i < num.length; i++ ){
+    newNum[i] = num[i];
+}
+```
+
+
+✔ System.arraycopy()를 이용한 배열의 복사
+
+```
+System.arraycopy(arr1, 0, arr2, 0, arr1.length);
+//arr[0]에서 arr2[0]으로 arr.legnth개의 데이터를 복사
+```
+
+
+</details>
