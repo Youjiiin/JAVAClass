@@ -1,6 +1,7 @@
 package Week2;
 import java.util.*;
 
+//예제 4-7
 public class Week2_1 {
     public static void main(String[] args) {
         game(); //게임 실행

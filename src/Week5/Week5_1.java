@@ -10,5 +10,10 @@ public class Week5_1 {
         System.out.println(p3.getLocation());
         System.out.println(p3);
         System.out.println(p3.toString());
+
+        Point p1 = new Point30(5, 6, 7);
+        System.out.println(p1.getLocation());
+        System.out.println(p1.toString());
+
     }
 }
