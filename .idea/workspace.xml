@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0383fa2-3508-43e0-9b1c-8ecb8e5421a2" name="Changes" comment="JAVA 수업">
-      <change afterPath="$PROJECT_DIR$/src/Work/a.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Week3/TvTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Week3/TvTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Week3/Week3_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Week3/Week3_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Week4/Week4_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Week4/Week4_1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +50,7 @@
       <recent name="C:\IntelliJ\JAVAClass\src\Week2" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.a">
+  <component name="RunManager" selected="Application.Week4_1">
     <configuration name="MovieTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Work.MovieTest" />
       <module name="JAVAClass" />
@@ -89,12 +90,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Week3_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Week3.Week3_1" />
+    <configuration name="Week4_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Week4.Week4_1" />
       <module name="JAVAClass" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Week3.*" />
+          <option name="PATTERN" value="Week4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,11 +118,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Week4_1" />
         <item itemvalue="Application.a" />
         <item itemvalue="Application.MovieTest" />
         <item itemvalue="Application.TvTest" />
         <item itemvalue="Application.TvTest1" />
-        <item itemvalue="Application.Week3_1" />
       </list>
     </recent_temporary>
   </component>
@@ -155,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697635273616</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="JAVA 수업">
+      <created>1698125259417</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698125259417</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

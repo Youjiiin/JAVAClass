@@ -1,6 +1,7 @@
 package Week3;
 
 public class Week3_2 {
+    //카드종류
     public static void main(String[] args) {
 //        System.out.println("card width = " + Card.width);
 //        System.out.println("card height = " + Card.height);
