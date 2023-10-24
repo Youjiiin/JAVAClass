@@ -419,12 +419,12 @@ int add(int a, int b) {
 }
 ```
 
-🧩 JVM의 메모리 구조
+🧩 JVM의 메모리 구조 <br>
 <img width="240" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/7f7d7e20-cb3d-4096-a3f2-de2242b9ef19">
 
-✅ 메서드 영역 : 클래스 정보와 클래스 변수가 저장되는 곳
-✅ 호출 스택 : 메서드의 작업공간, 메서드 호출 시 메서드 수행에 필요한 메모리 공간 할당받은 후, 종료되면 사용하던 메모리 반환
-✅ 힙 : 인스턴스가 생성되는 공간, new 연산자에 의해서 생성되는 배열과 객체는 모두 이곳에 생성
+✅ 메서드 영역 : 클래스 정보와 클래스 변수가 저장되는 곳 <br>
+✅ 호출 스택 : 메서드의 작업공간, 메서드 호출 시 메서드 수행에 필요한 메모리 공간 할당받은 후, 종료되면 사용하던 메모리 반환 <br>
+✅ 힙 : 인스턴스가 생성되는 공간, new 연산자에 의해서 생성되는 배열과 객체는 모두 이곳에 생성 <br>
 
 ✅ 기본형 매개변수 : 변수의 값을 읽기만 할 수 있음 <br>
 ✅ 참조형 매개변수 : 변수의 값을 읽고 변경 가능 <br>
@@ -465,6 +465,43 @@ class Test {
     }
 }
 ```
+✅ static <br>
+: static은 메모리 할당을 딱 한 번만 하게 되고, 이에 대한 값을 공유할 수 있게 해준다.
+
+```
+class Counter  {
+    int count = 0;
+    Counter() {
+        this.count++;
+        System.out.println(this.count);
+    }
+}
+
+public class Sample {
+    public static void main(String[] args) {
+        Counter c1 = new Counter();  //1
+        Counter c2 = new Counter();  //1
+    }
+}
+```
+위의 코드를 실행하면 둘다 1이 출력되게 된다. 생성자를 호출하며 서로 다른 메모리를 가리키고 있기 때문이다.
+```
+class Counter  {
+    static int count = 0;
+    Counter() {
+        count++;  // count는 더이상 객체변수가 아니므로 this를 제거하는 것이 좋다.
+        System.out.println(count);  // this 제거
+    }
+}
+
+public class Sample {
+    public static void main(String[] args) {
+        Counter c1 = new Counter();  //1
+        Counter c2 = new Counter();  //2
+    }
+}
+```
+static키워드를 붙여주면 count의 값은 같은 메모리를 공유해서 같은 count값에 대한 count++;가 두번 실행된다.
 
 🧩 메서드 오버로딩 <br>
 : 하나의 클래스에 같은 이름의 메서드를 여러 개 정의하는 것을 메서드 오버로딩이라고 한다.
