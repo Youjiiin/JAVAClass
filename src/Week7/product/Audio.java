@@ -1,6 +1,6 @@
-package Week7;
+package Week7.product;
 
-public class Audio extends Product{
+public class Audio extends Product {
     public Audio(){}
     public Audio(int price){
         super(price);

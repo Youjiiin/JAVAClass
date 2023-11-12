@@ -1,4 +1,4 @@
-package Week7;
+package Week7.product;
 
 public class Buyer {
     private int money = 1000;

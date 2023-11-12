@@ -1,6 +1,8 @@
-package Week7;
+package Week7.product;
 
-public class Tv extends Product{
+import Week7.product.Product;
+
+public class Tv extends Product {
     public Tv(){}
     public Tv(int price){
         super(price);
