@@ -786,16 +786,18 @@ class InitTest {
   <summary>
     📂 9장 : Object 클래스
   </summary>
-  ![image](https://github.com/Youjiiin/JAVAClass/assets/114130942/b4da7b26-57d3-4090-8933-52e3f27bfbe9)
+  <img width="541" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/b4da7b26-57d3-4090-8933-52e3f27bfbe9">
 
   <details>
   <summary>
     👩‍💻 Object 클래스
   </summary>
+    
   📌 equals(Object obj)
   - 객체 자신과 주어진 객체를 비교한다. 같으면 true / 다르면 false
   - Object클래스에 정의된 equals()는 참조변수 값을 비교한다.
   - equals()를 오버라이딩해서 인스턴스변수의 값을 비교하도록 바꾼다.
+    
   ```
     clas Person {
         long id;
@@ -888,41 +890,42 @@ class InitTest {
     int i2 = Integer.valueOf("100"); //"100" -> 100
     char c = "A".charAt(0); //"A" -> 'A'
    ```
-   ![image](https://github.com/Youjiiin/JAVAClass/assets/114130942/a538b929-ef3e-4a0c-8382-0d46466733eb)
+  <img width="240" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/7f7d7e20-cb3d-4096-a3f2-de2242b9ef19">
 
   </details>
   
-    <details>
-    <summary>
-        👩‍💻 StringBuffer 클래스
-    </summary>
-    ✅ StringBuffer클래스의 특징
-    - String처럼 문자형 배열(char[])을 내부적으로 가지고 있다.
-    - 그러나, String클래스와 달리 내용을 변경할 수 있다.
-    - 인스턴스를 생성할 때 버퍼(배열)의 크기를 충분히 지정해주는 것이 좋다.(버퍼가 적으면 성능 저하 - 작업 중에 더 큰 배열의 생성이 필요)
-    - String클래스와 달리 equals()를 오버라이딩하지 않았다.
-    </details>
-    
-    <details>
-    <summary>
-        👩‍💻 Math & wrapper 클래스
-    </summary>
-    ✅ Math 클래스
-    
-    : 수학계산에 용이
-    ![image](https://github.com/Youjiiin/JAVAClass/assets/114130942/20ecc577-a4aa-4704-81f4-cf015e1dd53e)
-    
-    ✅ wrapper 클래스
-    
-    : 기본형을 클래스로 정의한 것. 기본형도 객체로 다뤄져야 할 때가 있다.
-    - 내부적으로 기본형 변수를 가지고 있다.
-    - 값을 비교하도록 equals()가 오버라이딩되어 있다.
-    ![img_3](https://github.com/Youjiiin/JAVAClass/assets/114130942/900533b7-4e98-4fde-8cfe-0d5b2dc149ef)
-    
-    ✅ Number 클래스
-    
-    : 숫자를 멤버변수로 갖는 클래스의 조상(추상 클래스)
-    ![img_4](https://github.com/Youjiiin/JAVAClass/assets/114130942/2a254d0e-7bfb-4ddb-9479-07f3a65134ab)
+  <details>
+  <summary>
+      👩‍💻 StringBuffer 클래스
+  </summary>
+  ✅ StringBuffer클래스의 특징
+  - String처럼 문자형 배열(char[])을 내부적으로 가지고 있다.
+  - 그러나, String클래스와 달리 내용을 변경할 수 있다.
+  - 인스턴스를 생성할 때 버퍼(배열)의 크기를 충분히 지정해주는 것이 좋다.(버퍼가 적으면 성능 저하 - 작업 중에 더 큰 배열의 생성이 필요)
+  - String클래스와 달리 equals()를 오버라이딩하지 않았다.
+  </details>
+  
+  <details>
+  <summary>
+      👩‍💻 Math & wrapper 클래스
+  </summary>
+  ✅ Math 클래스
+  
+  : 수학계산에 용이
+  
+  ![image](https://github.com/Youjiiin/JAVAClass/assets/114130942/20ecc577-a4aa-4704-81f4-cf015e1dd53e)
+  
+  ✅ wrapper 클래스
+  
+  : 기본형을 클래스로 정의한 것. 기본형도 객체로 다뤄져야 할 때가 있다.
+  - 내부적으로 기본형 변수를 가지고 있다.
+  - 값을 비교하도록 equals()가 오버라이딩되어 있다.
+  ![img_3](https://github.com/Youjiiin/JAVAClass/assets/114130942/900533b7-4e98-4fde-8cfe-0d5b2dc149ef)
+  
+  ✅ Number 클래스
+  
+  : 숫자를 멤버변수로 갖는 클래스의 조상(추상 클래스)
+  ![img_4](https://github.com/Youjiiin/JAVAClass/assets/114130942/2a254d0e-7bfb-4ddb-9479-07f3a65134ab)
 
-    </details>
+  </details>
 </details>
