@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0383fa2-3508-43e0-9b1c-8ecb8e5421a2" name="Changes" comment="JAVA 수업" />
+    <list default="true" id="e0383fa2-3508-43e0-9b1c-8ecb8e5421a2" name="Changes" comment="JAVA 수업">
+      <change afterPath="$PROJECT_DIR$/src/quiz2/Average.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/quiz2/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/quiz2/EmployeeManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/quiz2/InterfaceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/quiz2/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/quiz2/Temporary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/quiz2/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,14 +55,17 @@
       <recent name="C:\IntelliJ\JAVAClass\src\Week3" />
       <recent name="C:\IntelliJ\JAVAClass\src\Week2" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="quiz2" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Test">
-    <configuration name="CreditCardArrayTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="creditcard.CreditCardArrayTest" />
+  <component name="RunManager" selected="Application.HashMapEx">
+    <configuration name="CloneEx1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Work.work3.CloneEx1" />
       <module name="JAVAClass" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="creditcard.*" />
+          <option name="PATTERN" value="Work.work3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -60,12 +73,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreditCardTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="creditcard.CreditCardTest" />
+    <configuration name="HashMapEx" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Work.Work4.HashMapEx" />
       <module name="JAVAClass" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="creditcard.*" />
+          <option name="PATTERN" value="Work.Work4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -73,12 +86,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Q6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Work.Q6" />
+    <configuration name="InterfaceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="quiz2.InterfaceTest" />
       <module name="JAVAClass" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Work.work2.*" />
+          <option name="PATTERN" value="quiz2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -86,12 +99,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Week7.product.Test" />
+    <configuration name="PolymorphismTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Week7.PolymorphismTest" />
       <module name="JAVAClass" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Week7.product.*" />
+          <option name="PATTERN" value="Week7.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,12 +112,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UnitTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Work.work2.UnitTest" />
+    <configuration name="quiz2.Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="quiz2.Test" />
       <module name="JAVAClass" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Work.work2.*" />
+          <option name="PATTERN" value="quiz2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,11 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.UnitTest" />
-        <item itemvalue="Application.CreditCardArrayTest" />
-        <item itemvalue="Application.CreditCardTest" />
-        <item itemvalue="Application.Q6" />
+        <item itemvalue="Application.HashMapEx" />
+        <item itemvalue="Application.CloneEx1" />
+        <item itemvalue="Application.InterfaceTest" />
+        <item itemvalue="Application.quiz2.Test" />
+        <item itemvalue="Application.PolymorphismTest" />
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699804197193</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="JAVA 수업">
+      <created>1699806270703</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699806270703</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

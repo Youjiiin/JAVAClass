@@ -617,3 +617,166 @@ class InitTest {
 </details>
 
 </details>
+
+----------------------------------------------------------------------
+
+<details>
+  <summary>
+    📂 8장 : 예외처리
+  </summary>
+  
+  😮예외 vs 오류
+  - 에러(error) : 프로그램 코드에 의해서 수습될 수 없는 심각한 오류
+  - 예외(exception) : 프로그램 코드에 의해서 수습될 수 있는 다소 미약한 오류
+  
+  ✅ 예외처리의 정의와 목적
+  - 정의 : 프로그램 실행 시 발생할 수 있는 예외의 발생에 대비한 코드를 작성하는 것
+  - 목적 : 프로그램의 비정상 종료를 막고, 정상적인 실행상태를 유지하는 것
+  
+  📌 예외처리 구문 try - catch
+  ```
+    try {
+        //예외가 발생할 가능성이 있는 문장들을 넣는다.
+    } catch (Exception e1) {
+        //예외가 발생했을 경우, 이를 처리하기 위한 문장을 적는다.
+    }
+  ```
+  ✔ try 블럭 내에서 예외가 발생한 경우
+  1. 발생한 예외와 일치하는 catch 블럭이 있는지 확인한다.
+  2. 일치하는 catch 블럭을 찾게 되면, 그 catch 블럭 내의 문장들을 수행하고 전체 try-catch문을 빠져나가서 
+  그 다음 문장을 계속해서 수행한다. 만일 일치하는 catch블럭을 찾지 못하면, 예외는 처리되지 못한다.
+  
+  ✔ try 블럭 내에서 예외가 발생하지 않은 경우
+  1. catch블럭을 거치지 않고 전체 try-catch문을 빠져나가서 수행을 계속한다.
+  
+  📌 예외 발생시키기
+  1. 먼저, 연산자 new를 이용해서 발생시키려는 예외 클래스의 객체를 만든 다음
+  ```
+    Exception e = new Exception("고의로 발생시켰음");
+  ```
+  2. 키워드 throw를 이용해서 예외를 발생시킨다.
+  ```
+    throw e;
+  ```
+  
+  📌 예외 클래스의 계층구조
+  - RuntimeException 클래스들 : 프로그래머의 실수로 발생하는 예외 -> 예외처리 필수
+  - Exception 클래스들 : 사용자의 실수와 같은 외적인 요인에 의해 발생하는 예외 -> 예외처리 선택
+  
+  try블럭에서 예외가 발생하면, 발생한 예외를 처리할 catch블럭을 찾는다. 첫번째 catch 블럭부터 순서대로 찾아 내려가며, 마지막에는 모든 종류의 에러를 처리할 수 있어야 한다.
+  
+  발생한 예외 객체를 catch블럭의 참조변수로 접근할 수 있다.
+  - printStackTrace() : 예외발생 당시의 호출스택에 있었던 메서드의 정보와 예외 메시지를 화면에 출력한다.
+  - getMessage() : 발생한 예외클래스의 인스턴스에 저장된 메시지를 얻을 수 있다.
+  
+  ✔ finally 블럭
+  - 예외의 발생여부와 관계없이 실행되어야 하는 코드를 넣는다.
+  - 선택적으로 사용할 수 있으며, try-catch-finally의 순서로 구성된다.
+  - 예외 발생시, try-catch-finally의 순서로 실행되고 예외 미발생시, try-finally의 순서로 실행된다.
+  - try 또는 catch 블럭에서 return문을 만나도 finally블럭은 수행된다.
+  ```
+    try {
+        //예외가 발생할 가능성이 있는 문장들을 넣는다.
+    } catch (Exception e1) {
+        //예외처리를 위한 문장을 적는다.
+    } finally {
+        //예외의 발생여부에 관계없이 항상 수행되어야 하는 문장들을 넣는다.
+        //finally 블럭은 try-catch문의 맨 마지막에 위치해야한다.
+    }  
+  ```
+  
+  ✔ 메서드에 예외 선언하기
+  : 예외를 처리하는 것이 아니라, 호출한 메서드로 전달해 주는 것, 호출한 메서드에서 예외처리를 해야한 만 할 때 사용
+  ```
+    void method() thorws Exception1, Exception2,... ExceptionN {
+        //메서드 내용
+    }
+    //예외를 발생시키는 키워드 throw와 예외를 메서드에 선언할 때 쓰이는 throws 구별
+  ```
+  ```
+    class ExceptionEx18 {
+        public static void main(String[] args) throws Exception {
+            method1();
+        }
+        static void method1() throws Exception {
+            method2();
+        }
+        static void method2() throws Exception {
+            thorw new Exception();
+        }
+    }
+  ```
+  
+  ✔ 예외 되던지기
+  : 예외를 처리한 후에 다시 예외를 생성해서 호출한 메서드로 전달, 예외가 발생한 메서드와 호출한 메서드, 양쪽에서 예외를 처리하는 경우에 사용
+  ```
+    class Exception23 {
+        public static void main(String[] args) {
+            try {
+                method1();
+            } catch (Exception e) {
+                System.out.prinln("main메서드에서 예외가 처리되었습니다.");
+            }
+        }
+
+        static void method1() thorws Exception {
+            try {
+                throw new Exception();
+            } catch (Exception e) {
+                System.out.prinln("method1메서드에서 예외가 처리되었습니다.");
+                thorw e;
+            }
+        }
+    }
+  ```
+  
+  ✔ 사용자정의 예외 만들기
+  : 기존 예외 클래스를 상속받아서 새로운 예외 클래스를 정의할 수 있다.
+  ```
+    class MyException extends Exception {
+        MyException(String msg) { //문자열을 매개변수로 받는 생성자
+            super(msg); //조상인 Exception클래스의 생성자를 호출한다.
+        }
+    }
+  ```
+  ```
+    class MyException extends Exception {
+        //에러 코드 값을 저장하기 위한 필드를 추가 했다.
+        private final int ERR_CODE;
+
+        MyException(String msg, int errCode) { //생성자
+            super(msg);
+            ERR_CODE = errCode;
+        }
+
+        MyException (String msg) { //생성자
+            this(msg, 100); //ERR_CODE를 100(기본값)으로 초기화 한다.
+        }
+
+        public int getErrCode () { //에러코드를 얻을 수 있는 메서드도 추가했다.
+            return ERR_CODE; //이 메서드는 주로 getMessage()와 함께 사용될 것이다.
+        }
+    }
+  ```
+  
+  ✔ 연결된 예외
+  - 예외 A가 예외 B를 발생시켰다면, A를 B의 '원인 예외'라고 한다.
+  ```
+    Throwable initCause (Throwable cause) //지정한 예외를 원인 예외로 등록
+    Throwable getCause() //원인 예외를 반환
+  ```
+  
+  - SpaceException이 발생했을 때, 이를 원인예외로 하는 InstallException발생시키는 방법 (호출한 쪽에서는 InstallException으로 처리)
+  ```
+    try {
+        startInstall();  //SpaceException 발생
+        copyFiles();
+    } catch (SpaceException e) {
+        InstallException ie = new InstallException("설치 중 예외발생"); //예외 생성
+        ie.initCause(e); //InstallException의 원인 예외를 SpaceException으로 지정
+        throw ie; //InstallException을 발생시킨다.
+        } catch (MemoryException me) {
+            //...
+        }
+  ```
+</details>
