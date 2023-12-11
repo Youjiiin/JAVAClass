@@ -780,3 +780,147 @@ class InitTest {
         }
   ```
 </details>
+
+----------------------------------------------------------------
+<details>
+  <summary>
+    📂 9장 : Object 클래스
+  </summary>
+  ![img.png](img.png)
+  
+  <details>
+  <summary>
+    👩‍💻 Object 클래스
+  </summary>
+  📌 equals(Object obj)
+  - 객체 자신과 주어진 객체를 비교한다. 같으면 true / 다르면 false
+  - Object클래스에 정의된 equals()는 참조변수 값을 비교한다.
+  - equals()를 오버라이딩해서 인스턴스변수의 값을 비교하도록 바꾼다.
+  ```
+    clas Person {
+        long id;
+
+        public boolean equals(Object obj) {
+            if(obj!=null && obj instanceof Person) {
+                return id == ((Person)obj).id; 
+                //obj가 Object타입이므로 id값을 참조하기 위해서는 Person타입으로 형변환이 필요하다.
+            } else {
+                return false; //타입이 Person이 아니면 값을 비교할 필요도 없다.
+            }
+        }
+
+        Person(long id) {
+            this.id = id;
+        }
+    }
+  ```
+  
+  📌 hashCode()
+  - 객체의 해시코드(int 타입의 정수)를 반환하는 메서드. 다량의 데이터를 저장&검색하는 해싱기법에 사용된다.
+  - Object 클래스의 hashCode()는 객체의 내부주소를 반환한다.
+  ```
+    public class Object {
+        public native int hashCode();
+    }
+  ```
+  - equals()를 오버라이딩하면, hashCode()도 같이 오버라이딩 해야한다. equals()의 결과가 true인 두 객체의 hash code는 같아야하기 때문
+  ```
+    String str1 = new String("abc"); 
+    String str2 = new String("abc");
+    System.out.println(str1.equals(str2)); //true
+    System.out.println(str1.hashCode()); //96354
+    System.out.println(str2.hashCode()); //96354
+  ```
+  - System.identityHashCode(Object obj)는 Object클래스의 hashCode()와 동일한 결과를 반환한다.
+  ```
+    System.out.println(System.identityHashCode(str1));
+    System.out.println(System.identityHashCode(str2));
+  ```
+  
+  📌 toString()
+  - 객체의 정보를 문자열로 제공할 목적으로 정의된 메서드
+  
+  📌 clone()
+  - 객체 자신을 복제해서 새로운 객체를 생성하는 메서드
+  - Cloneable인터페이스를 구현한 클래스의 인스턴스만 복제할 수 있다.
+  - Object클래스에 정의된 clone()은 인스턴스변수의 값만을 복제한다.
+  - 인스턴스변수가 참조형일 때, 참조하는 객체도 복제되게 오버라이딩 해야함.
+  
+  📌 getClass()
+  - 자신이 속한 클래스의 Class객체를 반환하는 메서드
+  - Class 객체는 클래스의 모든 정보를 담고 있으며, 클래스당 단 1개만 존재 (클래스파일이 메모리에 로드될 때 생성된다.)
+  - Class객체를 얻는 여러가지 방법
+      
+  ```
+        Card c = new Card();
+        Class cObj = c.getCalss();
+  ```
+      
+  </details>
+  
+  <details>
+  <summary>
+    👩‍💻 String 클래스
+  </summary>
+  ✅String 클래스의 특징
+  - 문자형 배열(char[])과 그에 관련된 메서드들이 정의되어 있다.
+  - String 인스턴스의 내용은 바꿀 수 없다.
+
+  ✔ 빈문자열 ("")
+  - 내용이 없는 문자열, 크기가 0인 char형 배열을 저장하는 문자열
+  - 크기가 0인 배열을 생성하는 것은 어느 타입이나 가능
+  - String str = "";은 가능 / char c = '';은 불가능
+   ```
+    String s = ""; //빈 문자열로 초기화
+    char c = ' '; //공백으로 초기화
+   ```
+   
+   ✔ 문자열과 기본형간의 변환
+   - 기본형 값을 문자열로 바꾸는 두 가지 방법 (방법2가 더 빠름)
+   ```
+    int i = 100;
+    String str1 = i + ""; //100 -> "100" 방법1
+    String str2 = String.valueOf(i); //100 -> "100" 방법2
+   ```
+   - 문자열을 기본형 값으로 변환하는 방법
+   ```
+    int i = Integer.parseInt("100"); //"100" -> 100
+    int i2 = Integer.valueOf("100"); //"100" -> 100
+    char c = "A".charAt(0); //"A" -> 'A'
+   ```
+   ![img_1.png](img_1.png)
+  </details>
+  
+    <details>
+    <summary>
+        👩‍💻 StringBuffer 클래스
+    </summary>
+    ✅ StringBuffer클래스의 특징
+    - String처럼 문자형 배열(char[])을 내부적으로 가지고 있다.
+    - 그러나, String클래스와 달리 내용을 변경할 수 있다.
+    - 인스턴스를 생성할 때 버퍼(배열)의 크기를 충분히 지정해주는 것이 좋다.(버퍼가 적으면 성능 저하 - 작업 중에 더 큰 배열의 생성이 필요)
+    - String클래스와 달리 equals()를 오버라이딩하지 않았다.
+    </details>
+    
+    <details>
+    <summary>
+        👩‍💻 Math & wrapper 클래스
+    </summary>
+    ✅ Math 클래스
+    
+    : 수학계산에 용이
+    ![img_2.png](img_2.png)
+    
+    ✅ wrapper 클래스
+    
+    : 기본형을 클래스로 정의한 것. 기본형도 객체로 다뤄져야 할 때가 있다.
+    - 내부적으로 기본형 변수를 가지고 있다.
+    - 값을 비교하도록 equals()가 오버라이딩되어 있다.
+    ![img_3.png](img_3.png)
+    
+    ✅ Number 클래스
+    
+    : 숫자를 멤버변수로 갖는 클래스의 조상(추상 클래스)
+    ![img_4.png](img_4.png)
+    </details>
+</details>

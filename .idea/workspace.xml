@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0383fa2-3508-43e0-9b1c-8ecb8e5421a2" name="Changes" comment="JAVA 수업">
-      <change afterPath="$PROJECT_DIR$/src/quiz2/Average.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/quiz2/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/quiz2/EmployeeManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/quiz2/InterfaceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/quiz2/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/quiz2/Temporary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/quiz2/Test.java" afterDir="false" />
+    <list default="true" id="e0383fa2-3508-43e0-9b1c-8ecb8e5421a2" name="Changes" comment="JAVA 수업 - 8장">
+      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -200,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699806270703</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="JAVA 수업 - 8장">
+      <created>1702275496427</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702275496427</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -216,6 +217,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="JAVA 수업" />
-    <option name="LAST_COMMIT_MESSAGE" value="JAVA 수업" />
+    <MESSAGE value="JAVA 수업 - 8장" />
+    <option name="LAST_COMMIT_MESSAGE" value="JAVA 수업 - 8장" />
   </component>
 </project>
