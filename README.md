@@ -786,8 +786,8 @@ class InitTest {
   <summary>
     📂 9장 : Object 클래스
   </summary>
-  ![img.png](img.png)
-  
+  ![image](https://github.com/Youjiiin/JAVAClass/assets/114130942/b4da7b26-57d3-4090-8933-52e3f27bfbe9)
+
   <details>
   <summary>
     👩‍💻 Object 클래스
@@ -888,7 +888,8 @@ class InitTest {
     int i2 = Integer.valueOf("100"); //"100" -> 100
     char c = "A".charAt(0); //"A" -> 'A'
    ```
-   ![img_1.png](img_1.png)
+   ![image](https://github.com/Youjiiin/JAVAClass/assets/114130942/a538b929-ef3e-4a0c-8382-0d46466733eb)
+
   </details>
   
     <details>
@@ -909,18 +910,19 @@ class InitTest {
     ✅ Math 클래스
     
     : 수학계산에 용이
-    ![img_2.png](img_2.png)
+    ![image](https://github.com/Youjiiin/JAVAClass/assets/114130942/20ecc577-a4aa-4704-81f4-cf015e1dd53e)
     
     ✅ wrapper 클래스
     
     : 기본형을 클래스로 정의한 것. 기본형도 객체로 다뤄져야 할 때가 있다.
     - 내부적으로 기본형 변수를 가지고 있다.
     - 값을 비교하도록 equals()가 오버라이딩되어 있다.
-    ![img_3.png](img_3.png)
+    ![img_3](https://github.com/Youjiiin/JAVAClass/assets/114130942/900533b7-4e98-4fde-8cfe-0d5b2dc149ef)
     
     ✅ Number 클래스
     
     : 숫자를 멤버변수로 갖는 클래스의 조상(추상 클래스)
-    ![img_4.png](img_4.png)
+    ![img_4](https://github.com/Youjiiin/JAVAClass/assets/114130942/2a254d0e-7bfb-4ddb-9479-07f3a65134ab)
+
     </details>
 </details>
