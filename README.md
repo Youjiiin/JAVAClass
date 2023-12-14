@@ -1106,7 +1106,7 @@ int idx = Arrays.binarySearch(arr, 2);
       <img width="333" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/0c17f6d3-a6b4-4469-a412-ae10ff361916">
       <img width="350" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/57c6d96a-be3b-4e83-8575-268d70dff7c1">
 
-🧩 HashMap / TreeMap - 순서X, 중복(키X, 값O)
+🧩 **HashMap / TreeMap** - 순서X, 중복(키X, 값O)
 - Map인터페이스를 구현, 데이터를 키와 값의 쌍으로 저장
 - HashNap(동기화X)은 HashTable(동기화O)의 신버전
 
@@ -1138,5 +1138,26 @@ int idx = Arrays.binarySearch(arr, 2);
 📌 TreeMap
 - 범위 검색과 정렬에 유리한 컬렉션 클래스
 - HashMap보다 데이터 추가, 삭제에 시간이 더 걸림
+- 이진 검색 트리의 구조로 키와 값의 쌍으로 이루어진 데이터를 저장
+- TreeSet처럼, 데이터를 정렬해서 저장하기 때문에 저장시간이 길다.
+- 다수의 데이터에서 개별적인 검색은 TreeMap보다 HashMap이 빠르다.
+- Map이 필요할 때 주로 HashMap을 사용하고, 정렬이나 범위검색이 필요한 경우에 TreeMap을 사용
+
+🧩 **Properties**
+- 내부적으로 Hashtable을 사용하며, key와 value를 (String, String)로 저장
+- 주로 어플리케이션의 환경설정에 관련된 속성을 저장하는데 사용되며 파일로부터 편리하게 값을 읽고 쓸 수 있는 메서드를 제공한다.
+
+🧩 **Collections** - 컬렉션을 위한 메서드를 제공
+1. 컬렉션 채우기, 복사, 정렬, 검색 - fill(), copy(), binarySearch() 등
+2. 컬렉션의 동기화 - synchronizedXXX()
+3. 변경불가(readOnly) 컬렉션 만들기 - unmodifiableXXX()
+4. 싱글톤 컬렉션 만들기 - singletonXXX()
+5. 한 종류의 객체만 저장하는 컬렉션 만들기 - checkedXXX()
+
+👩‍💻 요약
+
+<img width="408" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/f0eebf8b-29b1-4e35-a0c5-0d54c410b8f1">
+<img width="514" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/64086d59-cec8-46f2-82ab-84d2e99c9e46">
+
 
 </details>
