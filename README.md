@@ -1118,6 +1118,22 @@ int idx = Arrays.binarySearch(arr, 2);
   - key : 컬렉션 내의 키 중에서 유일해야 한다.
   - value : 키와 달리 데이터의 중복을 허용한다.
 <img width="457" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/c78e7454-a783-404f-897d-f896b26aae2f">
+- 해싱
+  - 해시함수로 해시테이블에 데이터를 저장, 검색
+  <img width="386" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/ecc00e12-81b0-4744-bc93-5c0747f99942">
+
+  - 해시테이블은 배열과 링크드 리스트가 조합된 형태
+  <img width="217" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/ebc0d309-cec2-4f47-825d-b127a7306431">
+
+  - 해시테이블에 저장된 데터를 가져오는 과정
+  1. 키로 해시함수를 호출해서 해시코드를 얻는다.
+  2. 해시코드(해시함수의 반환값)에 대응하는 링크드리스트를 배열에서 찾는다.
+  3. 링크드리스트에서 키와 일치하는 데이터를 찾는다.
+  
+  ※ 해시함수는 같은 키에 대해 항상 같은 해시코드를 반환해야 한다.
+  서로 다른 키일지라도 같은 값의 해시코드를 반환할 수도 있다.
+  <img width="439" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/bc32b2b9-770a-4938-a9eb-1d40fd230551">
+
 
 📌 TreeMap
 - 범위 검색과 정렬에 유리한 컬렉션 클래스
