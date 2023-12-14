@@ -929,3 +929,198 @@ class InitTest {
 
   </details>
 </details>
+
+----------------------------------------------------------------------
+
+<details>
+  <summary>
+    📂 11장 : 컬렉션 프레임웍
+  </summary>
+  
+  ✅ 컬렉션 프레임웍의 핵심 인터페이스
+  - **List** : 순서가 있는 데이터 집합, 데이터의 중복을 허용한다.
+  
+  => 구현 클래스 : ArrayList, LinkedList, Stack, Vector
+  
+  - **Set** : 순서를 유지하지 않는 데이터의 집합. 데이터의 중복을 허용하지 않는다. 
+  
+  => 구현 클래스 : HashSet, TreeSet
+  
+  - **Map** : key와 value의 쌍으로 이루어진 데이터의 집합. 순서는 유지되지 않으며, 키는 중복을 허용하지 않고, 값은 중복을 허용한다.
+  
+  => 구현 클래스 : HashMap, TreeMap, Hashtable, Properites
+  
+  📌 List 인터페이스의 메서드 - 순서O, 중복O
+  <img width="501" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/cc81142b-6593-4f0b-aa69-5f868f773818">
+  
+  📌 Set 인터페이스의 메서드 - 순서X, 중복X
+  <img width="562" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/f99834fd-3287-49e0-8d93-30c05b624bb3">
+
+  📌 Map 인터페이스의 메서드 - 순서X, 중복(키X, 값O)
+  <img width="560" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/5d436230-bb72-4baa-afbf-a3cefe257af3">
+
+  🧩 **ArrayList**
+
+  - ArrayList는 기존의 Vector를 개선한 것으로 구현원리가 기능적으로 동일, Vector는 자체적으로 동기화 처리가 되어 있으나 ArrayList는 그렇지 않다.
+  - List 인터페이스를 구현하므로, 저장순서가 유지되고 중복을 허용한다.
+  - 데이터의 저장공간으로 배열을 사용한다.(배열 기반)
+<img width="272" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/77355df1-c0f4-4fcd-97be-184e596df848">
+
+```
+  //리스트에 추가
+  ArrayList list = new ArrayList();
+  list.add("1");
+  list.add("2");
+  list.add("3");
+  System.out.println(list);
+  // [1, 2, 3]
+
+  //특정 인덱스에 추가
+  list.add(0, "0");
+  System.out.println(list);
+  //[0, 1, 2, 3]
+
+  //객체 찾기
+  System.out.println("index = " + list.indexOf("3"));
+  //index = 3
+
+  //개체 삭제
+  list.remove("3");
+  System.out.println(list);
+  //[0, 1, 2]
+
+  //없는 객체 삭제시
+  System.out.println(list.remove("3"));
+  //false
+
+  //없는 객체 탐색시
+  System.out.println("index = " + list.indexOf("3"));
+  //index = -1
+```
+✔ ArrayList에 저장된 객체의 삭제 과정
+0. ArrayList에 저장된 세 번째 데이터(data[2])를 삭제하는 과정. list.remove(2); 호출
+<img width="90" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/7729246a-4cfc-45cc-a111-18fcb3882458">
+
+1. 삭제할 데이터 아래의 데이터를 한 칸씩 위로 복사해서 삭제할 데이터를 덮어쓴다.
+<img width="327" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/3284b074-56bf-473a-afcf-511cdeb143bb">
+
+2. 데이터가 모두 한 칸씩 이동했으므로 마지막 데이터는 null로 변경한다.
+3. 데이터가 삭제되어 데이터의 개수가 줄었으므로 size의 값을 감소시킨다.   
+* 마지막 데이터를 삭제하는 경우, 1의 과정은 필요 없다.
+
+✔ ArrayList의 장점과 단점
+- 장점 : 배열은 구조가 간단하고 데이터를 읽는 데 걸리는 시간(접근 시간)이 짧다.
+- 단점1 : 크기를 변경할 수 없다.
+    - 크기를 변경해야 하는 경우 새로운 배열을 생성 후 데이터를 복사해야 함
+    - 크기 변경을 피하기 위해 충분히 큰 배열을 생성하면, 메모리가 낭비됨.
+- 단점 2 : 비순차적인 데이터의 추가, 삭제에 시간이 많이 걸린다.
+    - 데이터를 추가하거나 삭제하기 위해, 다른 데이터를 옮겨야 함.
+    - 그러나 순차적인 데이터를 (끝에 추가)와 삭제(끝부터 삭제)는 빠름.
+ 
+🧩 **LinkedList**
+- 배열의 단점을 보완했으며, 배열과 달리 불연속적으로 존재하는 데이터를 연결한다.
+  <img width="534" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/079a4137-fc02-4271-9225-4b0c61790425">
+
+  😮 ArrayList vs LinkedList
+  1. 순차적으로 데이터를 추가/삭제 - ArrayList
+  2. 비순차적으로 데이터를 추가/삭제 - LinkedList
+  3. 접근시간 - ArrayList이 빠름
+ 
+🧩 **Stack & Queue**
+- Stack : LIFO구조. 마지막에 저장된 것을 제일 먼저 꺼내게 된다.
+    - 수식계산, 수식괄호검사, undo/redo, 뒤로/앞으로(웹)
+- Queue : FIFO구조. 제일 먼저 저장한 것을 제일 먼저 꺼내게 된다.
+    - 최근 사용문서, 인쇄작업대기목록, 버퍼
+
+✔ Queue의 변형
+- 덱(Deque) : Stack과 Queue의 결합. 양끝에서 저장과 삭제가능
+- 우선순위 큐 : 우선순위가 높은것부터 꺼냄
+- 블락킹 큐 : 비어 있을 때 꺼내기와, 가득 차 있을 때 넣기를 지정된 시간동안 지연시킴 - 멀티쓰레드
+
+🧩 **Arrays** - 배열을 다루기 편리한 메서드 제공
+1. 배열의 출력 - toString()
+```
+static String toString(int[] a);
+```
+2. 다차원 배열의 비교와 출력 - deepEquals(), deepToString(), equals()
+```
+System.out.println(Arrays.equals(a, b));
+```
+3. 배열의 복사 - copyOf(), copyOfRange()
+```
+int[] arr = [0, 1, 2, 3, 4];
+int[] arr2 = Arrays.copyOf(arr, 3);
+//arr2 = [0, 1, 2]
+int[] arr3 = Arrays.copyOfRange(arr, 2, 3);
+//arr3 = [2, 3]
+```
+4. 배열 채우기 - fill(), setAll()
+```
+int[] arr = new int[5];
+Arrays.fill(arr, 9); //[9, 9, 9, 9, 9];
+Arrays.setAll(arr, () -> (int)(Math.random() * 5 + 1)); //[1, 9, 2, 3, 5];
+```
+5. 배열을 List로 변환 - asList(Object... a)
+```
+List list = Arrays.asList(1, 2, 3, 4, 5);
+```
+6. 배열의 정렬과 검색 - sort(), binarySearch()
+```
+int[] arr = {2, 3, 4, 1, 0};
+Arrays.sort(arr);
+int idx = Arrays.binarySearch(arr, 2);
+//idx = 2
+```
+
+🧩 Comparator / Comparable : 객체를 정렬하는데 필요한 메서드를 정의한 인터페이스(정렬기준을 제공)
+- Comparator : 기본 정렬기준을 구현하는데 사용
+- Comparable : 기본 정렬기준 외에 다른 기준으로 정렬하고자할 때 사용
+
+🧩 HashSet / TreeSet - 순서X, 중복X
+- HashSet
+  - Set 인터페이스를 구현한 대표적인 컬렉션 클래스
+  - 순서를 유지하려면, LinkedHashSet클래스를 사용하면 된다.
+  - HashSet은 객체를 저장하기전에 기존에 같은 객체가 있는지 확인한다. 같은 객체가 없으면 저장하고, 있으면 저장하지 않는다.
+  - boolean add(Object 0)는 저장할 객체의 equals()와 hashCode()를 호출. equals()와 hashCode()가 오버라이딩 되어있어야 함
+  - hashCode()의 오버라이딩 조건
+    - 동일 객체에 대해 hashCode()를 여러번 호출해도 동일한 값을 반환해야 한다.
+    - equlas()로 비교해서 true를 얻은 두 객체의 hashCode()값은 일치해야 한다. (false여도 같을 수 있다. 그러나 성능이 좋지 않음)
+ 
+- TreeSet
+  - 범위 검색과 정렬에 유리한 컬렉션 클래스
+  - HashSet보다 데이터 추가, 삭제에 시간이 더 걸림
+  - 범위 검색과 정렬에 유리한 이진 검색 트리로 구현. 링크드 리스트처럼 각 요소가 나무형태로 연결된 구조
+  - 이진 트리는 모든 노드가 최대 두 개의 하위 노드를 갖음(부모-자식관계)
+  - 이진 검색 트리는 부모보다 작은 값을 왼쪽에, 큰 값은 오른쪽에 저장
+  - HashSet보다 데이터 추가, 삭제에 시간이 더 걸림(반복적인 비교 후 저장)
+    <img width="558" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/0dd1dbd4-d9f6-4e48-b8d3-53834b5c400c">
+  - 데이터 저장 과정
+  <img width="510" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/cac94cc5-bb2d-427f-b6e8-5d26af51a68b">
+  <img width="497" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/5e1644cb-f5c2-4363-b1bb-b09cb1df998a">
+  <img width="468" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/b7dc241d-a616-4396-9ee9-a8d86309bc25">
+  - 트리 순회(전위, 중위, 후위)
+    - 이진 트리의 모든 노드를 한번씩 읽는 것을 트리 순회라고 한다.
+    - 전위, 중위, 후위 순회법이 있으며, 중위 순회하면 오름차순으로 정렬된다.
+      <img width="385" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/7d406c3b-291b-40b1-90ec-51591e8b678d">
+      <img width="312" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/09b13bb0-ec39-40f4-805f-3313725d5a77">
+      <img width="333" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/0c17f6d3-a6b4-4469-a412-ae10ff361916">
+      <img width="350" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/57c6d96a-be3b-4e83-8575-268d70dff7c1">
+
+🧩 HashMap / TreeMap - 순서X, 중복(키X, 값O)
+- Map인터페이스를 구현, 데이터를 키와 값의 쌍으로 저장
+- HashNap(동기화X)은 HashTable(동기화O)의 신버전
+
+📌 HashMap
+- Map 인터페이스를 구현한 대표적인 컬렉션 클래스
+- 순서를 유지하려면, LinkedHashMap 클래스를 사용하면 된다.
+- 해싱기법으로 데이터를 저장, 데이터가 많아도 검색이 빠르다.
+- Map 인터페이스를 구현. 데이터를 키와 값의 쌍으로 저장
+  - key : 컬렉션 내의 키 중에서 유일해야 한다.
+  - value : 키와 달리 데이터의 중복을 허용한다.
+<img width="457" alt="image" src="https://github.com/Youjiiin/JAVAClass/assets/114130942/c78e7454-a783-404f-897d-f896b26aae2f">
+
+📌 TreeMap
+- 범위 검색과 정렬에 유리한 컬렉션 클래스
+- HashMap보다 데이터 추가, 삭제에 시간이 더 걸림
+
+</details>
